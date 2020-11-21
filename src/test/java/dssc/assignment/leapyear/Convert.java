@@ -31,18 +31,6 @@ public class Convert {
         assertEquals("is not a leap year", leapYear.convert(year));
     }
 
-    @Test
-    void year_2000_to_an_atypical_leap_year(){
-        LeapYear leapYear = new LeapYear();
-        assertEquals("is an atypical leap year", leapYear.convert(2000));
-    }
-
-    @Test
-    void year_2400_to_an_atypical_leap_year(){
-        LeapYear leapYear = new LeapYear();
-        assertEquals("is an atypical leap year", leapYear.convert(2400));
-    }
-
     @ParameterizedTest
     @ValueSource(ints = {2000, 2400, 2800})
     void multiples_of_4_and_of_100_and_of_400_to_is_an_atypical_leap_year(int year) {

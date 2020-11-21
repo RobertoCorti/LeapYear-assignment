@@ -1,5 +1,10 @@
 package dssc.assignment.leapyear;
 
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class LeapYear {
     public static void main(String[] args) {
 
@@ -20,5 +25,11 @@ public class LeapYear {
         else  {
             return "is not a leap year";
         }
+    }
+
+
+    public void print() {
+        Stream<String> leapYearsString = IntStream.rangeClosed(2017,2020).mapToObj(this::convert);
+        System.out.println(leapYearsString.collect(Collectors.joining(", ")));
     }
 }
