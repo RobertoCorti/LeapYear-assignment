@@ -8,11 +8,9 @@ public class LeapYear {
     public String convert(int year) {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
-                if (year == 2000){
+                if (year % 400 == 0){
                     return "is an atypical leap year";
-                } else if (year == 2400){
-                    return "is an atypical leap year";
-                }else{
+                } else{
                     return "is not a leap year";
                 }
             } else {
