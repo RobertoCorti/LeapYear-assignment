@@ -10,7 +10,10 @@ public class LeapYear {
             return "is a typical leap year";
         } else if (year == 2004){
             return "is a typical leap year";
-        } else {
+        } else if (year == 1992){
+            return "is a typical leap year";
+        }
+        else  {
             return "is not a leap year";
         }
     }

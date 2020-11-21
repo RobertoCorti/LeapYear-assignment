@@ -29,4 +29,10 @@ public class Convert {
         assertEquals("is a typical leap year", leapYear.convert(2004));
     }
 
+    @Test
+    void year_1992_to_is_a_typical_leap_year(){
+        LeapYear leapYear = new LeapYear();
+        assertEquals("is a typical leap year", leapYear.convert(1992));
+    }
+
 }
