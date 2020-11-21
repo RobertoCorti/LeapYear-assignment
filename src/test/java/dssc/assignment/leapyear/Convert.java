@@ -17,22 +17,17 @@ public class Convert {
         assertEquals("is not a leap year", leapYear.convert(year));
     }
 
-    @Test
-    void year_1996_to_is_a_typical_leap_year(){
+    @ParameterizedTest
+    @ValueSource(ints = {1996, 2004, 1992})
+    void multiples_of_4_to_a_typical_leap_year(int year) {
         LeapYear leapYear = new LeapYear();
-        assertEquals("is a typical leap year", leapYear.convert(1996));
+        assertEquals("is a typical leap year", leapYear.convert(year));
     }
 
     @Test
-    void year_2004_to_is_a_typical_leap_year(){
+    void year_2100_to_is_not_leap_year(){
         LeapYear leapYear = new LeapYear();
-        assertEquals("is a typical leap year", leapYear.convert(2004));
-    }
-
-    @Test
-    void year_1992_to_is_a_typical_leap_year(){
-        LeapYear leapYear = new LeapYear();
-        assertEquals("is a typical leap year", leapYear.convert(1992));
+        assertEquals("is not a leap year", leapYear.convert(2100));
     }
 
 }
