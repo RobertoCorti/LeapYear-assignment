@@ -18,9 +18,15 @@ public class Convert {
     }
 
     @Test
-    void year_1996_to_is_a_leap_year(){
+    void year_1996_to_is_a_typical_leap_year(){
         LeapYear leapYear = new LeapYear();
         assertEquals("is a typical leap year", leapYear.convert(1996));
+    }
+
+    @Test
+    void year_2004_to_is_a_typical_leap_year(){
+        LeapYear leapYear = new LeapYear();
+        assertEquals("is a typical leap year", leapYear.convert(2004));
     }
 
 }
