@@ -43,4 +43,10 @@ public class Convert {
         assertEquals("is an atypical leap year", leapYear.convert(2400));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {2000, 2400, 2800})
+    void multiples_of_4_and_of_100_and_of_400_to_is_an_atypical_leap_year(int year) {
+        LeapYear leapYear = new LeapYear();
+        assertEquals("is an atypical leap year", leapYear.convert(year));
+    }
 }
