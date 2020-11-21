@@ -31,4 +31,16 @@ public class Convert {
         assertEquals("is not a leap year", leapYear.convert(year));
     }
 
+    @Test
+    void year_2000_to_an_atypical_leap_year(){
+        LeapYear leapYear = new LeapYear();
+        assertEquals("is an atypical leap year", leapYear.convert(2000));
+    }
+
+    @Test
+    void year_2400_to_an_atypical_leap_year(){
+        LeapYear leapYear = new LeapYear();
+        assertEquals("is an atypical leap year", leapYear.convert(2400));
+    }
+
 }
