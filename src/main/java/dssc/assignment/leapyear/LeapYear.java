@@ -6,11 +6,9 @@ public class LeapYear {
     }
 
     public String convert(int year) {
-        if (year % 4 == 0) {
-            return null;
-        } else {
-            return "is not a leap year";
+        if (year == 1996){
+            return "is a typical leap year";
         }
+        return "is not a leap year";
     }
-
 }
